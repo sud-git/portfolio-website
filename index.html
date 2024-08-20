@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/53fdd7f783.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
@@ -49,14 +50,104 @@
                             magnam aliquid ratione aperiam. Inventore illum sint quibusdam reiciendis neque nulla veritatis. 
                             Blanditiis velit neque officia
                              perferendis minus!</p>
-                             <div id="tab-titles">
-                                <p class="tab-links active-link">Skills</p>
-                                <p class="tab-links">Education</p>
+                             <div class="tab-titles">
+                                <p class="tab-links active-link onclick="opentab('skills')">Skills</p>
+                                <p class="tab-links onclick="opentab('education')">Education</p>
 
+                             </div>
+                             <div class="tab-contents active-tab" id="skills">
+                                <ul>
+                                    <li><span> UI/UX</span>
+                                    <br> design web app interfaces</li>
+                                    <li><span1>web development</span1></li>
+                                    <li><span>app development</span></li>
+                                </ul>
+                             </div>
+                             <div class="tab-contents" id="education">
+                                <ul>
+                                    <li><span>2023-current</span></li>
+                                </ul>
                              </div>
                     </div>
             </div>
         </div>
     </div>
+
+
+     
+    <div id="services">
+        <div class="container">
+            <h1 class=""sub-title">my services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>web design</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing
+                         elit. Harum reprehenderit a cumque vitae autem omnis pariatur repellat 
+                        deleniti odit, dignissimos, similique
+                         quos sequi esse alias dicta optio molestiae, voluptate expedita.</p>
+                         <a href="#"> learn more</a>
+                         </div>
+                         <div>
+                            <i class="fa-sharp fa-solid fa-crop"></i>
+                            <h2>app design</h2>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+                                Praesentium ducimus dolorum quam, totam, quisquam fuga magnam nesciunt cupiditate
+                                 aliquam eligendi dolorem temporibus rem nam 
+                                 facere asperiores alias. Ut, reiciendis corporis.</p>
+                                 <a href="#">learn more</a>
+                         </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+ <div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">my work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images">
+                <div class="layer">
+    
+                <h3>social media app</h3>
+                <p> the app connects to something bught</p>
+                <a href="#"><i class="fa-sharp fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+            </div>
+            <div class="work">
+                <img src="2">
+            </div>
+
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+
+        </div>
+        <div class="contact-right"></div>
+    </div></div>
+ </div>
+
+
+
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents =  document.getElementByClassName("tab-contents");
+
+        function opentab(tabname){
+                 for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+
+        }
+        for(tabcontent of tabcontents){
+             tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classlist.add("active-tab")
+
+    }
+    </script>
 </body>
 </html>
